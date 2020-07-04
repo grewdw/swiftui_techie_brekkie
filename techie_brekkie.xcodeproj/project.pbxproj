@@ -12,6 +12,14 @@
 		1D74524A24AEA93E00C65621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D74524924AEA93E00C65621 /* Assets.xcassets */; };
 		1D74524D24AEA93E00C65621 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D74524C24AEA93E00C65621 /* Preview Assets.xcassets */; };
 		1D74525024AEA93E00C65621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D74524E24AEA93E00C65621 /* Main.storyboard */; };
+		1D74525A24AEA97E00C65621 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D74525924AEA97E00C65621 /* Animation.swift */; };
+		1D74525C24AEB2C900C65621 /* Windmill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D74525B24AEB2C900C65621 /* Windmill.swift */; };
+		1D7F493824AF303900BD6348 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F493724AF303900BD6348 /* Modifiers.swift */; };
+		1D7F493A24AF6FF200BD6348 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F493924AF6FF200BD6348 /* Sun.swift */; };
+		1D7F493C24AF80F700BD6348 /* AnimationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F493B24AF80F700BD6348 /* AnimationState.swift */; };
+		1D7F493E24AF811800BD6348 /* AnimationStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F493D24AF811800BD6348 /* AnimationStage.swift */; };
+		1D7F494324AF8B6A00BD6348 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F494224AF8B6A00BD6348 /* Intro.swift */; };
+		1D82CB6024AF9959009531DB /* Outro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82CB5F24AF9959009531DB /* Outro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +31,14 @@
 		1D74524F24AEA93E00C65621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D74525124AEA93E00C65621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D74525224AEA93E00C65621 /* techie_brekkie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = techie_brekkie.entitlements; sourceTree = "<group>"; };
+		1D74525924AEA97E00C65621 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		1D74525B24AEB2C900C65621 /* Windmill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windmill.swift; sourceTree = "<group>"; };
+		1D7F493724AF303900BD6348 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		1D7F493924AF6FF200BD6348 /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
+		1D7F493B24AF80F700BD6348 /* AnimationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationState.swift; sourceTree = "<group>"; };
+		1D7F493D24AF811800BD6348 /* AnimationStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStage.swift; sourceTree = "<group>"; };
+		1D7F494224AF8B6A00BD6348 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
+		1D82CB5F24AF9959009531DB /* Outro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,9 @@
 		1D74524424AEA93C00C65621 /* techie_brekkie */ = {
 			isa = PBXGroup;
 			children = (
+				1D7F494124AF8B2400BD6348 /* intro */,
+				1D7F493624AF302C00BD6348 /* modifiers */,
+				1D74525824AEA96D00C65621 /* animation */,
 				1D74524524AEA93C00C65621 /* AppDelegate.swift */,
 				1D74524724AEA93C00C65621 /* ContentView.swift */,
 				1D74524924AEA93E00C65621 /* Assets.xcassets */,
@@ -72,6 +91,35 @@
 				1D74524C24AEA93E00C65621 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1D74525824AEA96D00C65621 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				1D74525924AEA97E00C65621 /* Animation.swift */,
+				1D74525B24AEB2C900C65621 /* Windmill.swift */,
+				1D7F493924AF6FF200BD6348 /* Sun.swift */,
+				1D7F493B24AF80F700BD6348 /* AnimationState.swift */,
+				1D7F493D24AF811800BD6348 /* AnimationStage.swift */,
+			);
+			path = animation;
+			sourceTree = "<group>";
+		};
+		1D7F493624AF302C00BD6348 /* modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F493724AF303900BD6348 /* Modifiers.swift */,
+			);
+			path = modifiers;
+			sourceTree = "<group>";
+		};
+		1D7F494124AF8B2400BD6348 /* intro */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F494224AF8B6A00BD6348 /* Intro.swift */,
+				1D82CB5F24AF9959009531DB /* Outro.swift */,
+			);
+			path = intro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +194,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D74524824AEA93C00C65621 /* ContentView.swift in Sources */,
+				1D74525C24AEB2C900C65621 /* Windmill.swift in Sources */,
+				1D7F494324AF8B6A00BD6348 /* Intro.swift in Sources */,
+				1D7F493A24AF6FF200BD6348 /* Sun.swift in Sources */,
+				1D7F493E24AF811800BD6348 /* AnimationStage.swift in Sources */,
+				1D82CB6024AF9959009531DB /* Outro.swift in Sources */,
+				1D7F493C24AF80F700BD6348 /* AnimationState.swift in Sources */,
+				1D74525A24AEA97E00C65621 /* Animation.swift in Sources */,
+				1D7F493824AF303900BD6348 /* Modifiers.swift in Sources */,
 				1D74524624AEA93C00C65621 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
