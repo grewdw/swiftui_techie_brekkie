@@ -54,7 +54,7 @@ struct ContentView: View {
                                 link("Modifiers")
                             }
                             
-                            NavigationLink(destination: EmptyView()) {
+                            NavigationLink(destination: StateView()) {
                                 link("State")
                             }
                             

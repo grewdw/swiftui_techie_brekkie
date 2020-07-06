@@ -19,7 +19,7 @@ struct Intro: View {
                 .scaledToFit()
                 .frame(maxWidth: geometry.size.width * 0.9, maxHeight: geometry.size.height * 0.9)
                 .shadow(radius: 20)
-                .background(Color.black.opacity(0.75).frame(width: geometry.size.width, height: geometry.size.height))
+                .background(Color.black.opacity(0.9).frame(width: geometry.size.width, height: geometry.size.height))
                     .onTapGesture {
                         withAnimation(.easeIn) {
                             self.visible.toggle()

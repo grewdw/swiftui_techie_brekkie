@@ -20,6 +20,11 @@
 		1D7F493E24AF811800BD6348 /* AnimationStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F493D24AF811800BD6348 /* AnimationStage.swift */; };
 		1D7F494324AF8B6A00BD6348 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F494224AF8B6A00BD6348 /* Intro.swift */; };
 		1D82CB6024AF9959009531DB /* Outro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82CB5F24AF9959009531DB /* Outro.swift */; };
+		1D82CB7624B3846C009531DB /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82CB7524B3846C009531DB /* StateView.swift */; };
+		1D82CB7824B3882D009531DB /* StateWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82CB7724B3882D009531DB /* StateWrapper.swift */; };
+		1D82CB7B24B38C60009531DB /* CodeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82CB7A24B38C60009531DB /* CodeBox.swift */; };
+		1D82CB7D24B3B009009531DB /* BindingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82CB7C24B3B009009531DB /* BindingWrapper.swift */; };
+		1D82CB7F24B3B0A8009531DB /* SlideHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82CB7E24B3B0A8009531DB /* SlideHeading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		1D7F493D24AF811800BD6348 /* AnimationStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStage.swift; sourceTree = "<group>"; };
 		1D7F494224AF8B6A00BD6348 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		1D82CB5F24AF9959009531DB /* Outro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outro.swift; sourceTree = "<group>"; };
+		1D82CB7524B3846C009531DB /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		1D82CB7724B3882D009531DB /* StateWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateWrapper.swift; sourceTree = "<group>"; };
+		1D82CB7A24B38C60009531DB /* CodeBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBox.swift; sourceTree = "<group>"; };
+		1D82CB7C24B3B009009531DB /* BindingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingWrapper.swift; sourceTree = "<group>"; };
+		1D82CB7E24B3B0A8009531DB /* SlideHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideHeading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				1D7F494124AF8B2400BD6348 /* intro */,
+				1D82CB7424B3845D009531DB /* state */,
 				1D7F493624AF302C00BD6348 /* modifiers */,
 				1D74525824AEA96D00C65621 /* animation */,
+				1D82CB7924B38C3C009531DB /* shared */,
 				1D74524524AEA93C00C65621 /* AppDelegate.swift */,
 				1D74524724AEA93C00C65621 /* ContentView.swift */,
 				1D74524924AEA93E00C65621 /* Assets.xcassets */,
@@ -120,6 +132,25 @@
 				1D82CB5F24AF9959009531DB /* Outro.swift */,
 			);
 			path = intro;
+			sourceTree = "<group>";
+		};
+		1D82CB7424B3845D009531DB /* state */ = {
+			isa = PBXGroup;
+			children = (
+				1D82CB7524B3846C009531DB /* StateView.swift */,
+				1D82CB7724B3882D009531DB /* StateWrapper.swift */,
+				1D82CB7C24B3B009009531DB /* BindingWrapper.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		1D82CB7924B38C3C009531DB /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				1D82CB7A24B38C60009531DB /* CodeBox.swift */,
+				1D82CB7E24B3B0A8009531DB /* SlideHeading.swift */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +227,14 @@
 				1D74524824AEA93C00C65621 /* ContentView.swift in Sources */,
 				1D74525C24AEB2C900C65621 /* Windmill.swift in Sources */,
 				1D7F494324AF8B6A00BD6348 /* Intro.swift in Sources */,
+				1D82CB7D24B3B009009531DB /* BindingWrapper.swift in Sources */,
+				1D82CB7824B3882D009531DB /* StateWrapper.swift in Sources */,
+				1D82CB7F24B3B0A8009531DB /* SlideHeading.swift in Sources */,
+				1D82CB7624B3846C009531DB /* StateView.swift in Sources */,
 				1D7F493A24AF6FF200BD6348 /* Sun.swift in Sources */,
 				1D7F493E24AF811800BD6348 /* AnimationStage.swift in Sources */,
 				1D82CB6024AF9959009531DB /* Outro.swift in Sources */,
+				1D82CB7B24B38C60009531DB /* CodeBox.swift in Sources */,
 				1D7F493C24AF80F700BD6348 /* AnimationState.swift in Sources */,
 				1D74525A24AEA97E00C65621 /* Animation.swift in Sources */,
 				1D7F493824AF303900BD6348 /* Modifiers.swift in Sources */,

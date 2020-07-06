@@ -26,7 +26,7 @@ struct Outro: View {
                     Text("Source code for this presentation: https://github.com/grewdw/swiftui_techie_brekkie")
                         .font(.system(size: 32, weight: .heavy, design: Font.Design.default))
                     Spacer()
-                    Text("   By David Grew")
+                    Text("By David Grew")
                         .font(.system(size: 32, weight: .heavy, design: Font.Design.default))
                     Spacer()
                 }
@@ -35,7 +35,7 @@ struct Outro: View {
             }
             .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.9)
             .shadow(radius: 20)
-            .background(Color.black.opacity(0.75).frame(width: geometry.size.width, height: geometry.size.height))
+            .background(Color.black.opacity(0.9).frame(width: geometry.size.width, height: geometry.size.height))
                 .onTapGesture {
                     withAnimation(.easeIn) {
                         self.visible.toggle()
