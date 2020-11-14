@@ -23,11 +23,13 @@ struct StateWrapper: View {
                     
                     CodeBox(text: """
                         struct Destination: View {
-
+                        
                           var holidayDestinations = [...]
+                        
 
                           @State var selection: String = \(self.selection)
 
+                        
                           var body: some View {
                         
                             VStack {

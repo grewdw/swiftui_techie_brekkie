@@ -68,19 +68,19 @@ struct Animation: View {
                             .onTapGesture {
                                 self.state.windmillRotation += 315
                         }
-                        CodeBox(text: "withAnimation(.linear(duration: 1) { \n     self.state.windmillRotation += 315 \n }")
+                        CodeBox(text: "withAnimation(.linear(duration: 1)) { \n     self.state.windmillRotation += 315 \n }")
                             .onTapGesture {
                                 withAnimation(.linear(duration: 1)) {
                                     self.state.windmillRotation += 315
                                 }
                             }
-                        CodeBox(text: "withAnimation(.easeIn(duration: 1) { \n     self.state.windmillRotation += 315 \n }")
+                        CodeBox(text: "withAnimation(.easeIn(duration: 1)) { \n     self.state.windmillRotation += 315 \n }")
                             .onTapGesture {
                                 withAnimation(.easeIn(duration: 1)) {
                                     self.state.windmillRotation += 315
                                 }
                             }
-                        CodeBox(text: "withAnimation(.easeOut(duration: 1) { \n     self.state.windmillRotation += 315 \n }")
+                        CodeBox(text: "withAnimation(.easeOut(duration: 1)) { \n     self.state.windmillRotation += 315 \n }")
                             .onTapGesture {
                                 withAnimation(.easeOut(duration: 1)) {
                                     self.state.windmillRotation += 315
@@ -88,7 +88,7 @@ struct Animation: View {
                             }
                         CodeBox(text: "withAnimation(.spring()) { \n     self.state.windmillRotation += 315 \n }")
                             .onTapGesture {
-                                withAnimation(.spring()) {
+                                withAnimation(.interpolatingSpring(stiffness: 10, damping: 1)) {
                                     self.state.windmillRotation += 315
                                 }
                             }

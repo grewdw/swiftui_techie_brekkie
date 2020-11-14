@@ -46,8 +46,8 @@ struct ContentView: View {
                                 link("Overview")
                             }
                             
-                            NavigationLink(destination: EmptyView()) {
-                                link("Structure and Positioning")
+                            NavigationLink(destination: Structure()) {
+                                link("Structure & Positioning")
                             }
                             
                             NavigationLink(destination: Modifiers()) {

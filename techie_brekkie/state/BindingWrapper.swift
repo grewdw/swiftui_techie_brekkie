@@ -25,45 +25,53 @@ struct BindingWrapper: View {
                         Item(label: "Total", cost: 76.48 * self.currency.rawValue, currency: self.currency)
                     }
                     .frame(width: geometry.size.width * 0.3)
+                    .padding()
+                    .border(Color.blue, width: 3)
                     Spacer()
                     CodeBox(text: """
-                        ...
-                        @State var currency: Currency = \(self.currency)
+                        struct Receipt: View {
                         
-                        var body: some View {
+                          @State var currency: Currency = \(self.currency)
                         
-                          HStack {
-                            ItemForm()
+                          var body: some View {
+                        
+                            HStack {
+                              ItemForm()
                             
-                            CurrencySelector(currency: $currency)
+                              CurrencySelector(currency: $currency)
                         
+                            }
                           }
-                        ...
+                        }
                         """)
                 }
-                .frame(width: geometry.size.width * 0.45, height: geometry.size.height * 0.9)
+                .frame(width: geometry.size.width * 0.48, height: geometry.size.height * 0.9)
                 
                 VStack(spacing: 50) {
                     Spacer()
                     CurrencySelector(currency: self.$currency)
+                        .padding()
+                        .border(Color.blue, width: 3)
                     Spacer()
                     CodeBox(text: """
-                        ...
-                        @Binding var currency: Currency
-                        
-                        var body: some View {
-                          
-                          Picker("Currency", selection: $currency) {
-                            
-                            ForEach(Currency.currencies) { c in
+                        struct CurrencySelector: View {
 
-                              Text(Currency.getName(c))
+                          @Binding var currency: Currency
+                        
+                          var body: some View {
+                          
+                            Picker("Currency", selection: $currency) {
+                            
+                              ForEach(Currency.currencies) { c in
+
+                                Text(Currency.getName(c))
 
                             }
-                        ...
+                          }
+                        }
                         """)
                 }
-                .frame(width: geometry.size.width * 0.45, height: geometry.size.height * 0.9)
+                .frame(width: geometry.size.width * 0.48, height: geometry.size.height * 0.9)
             }
         }
     }
@@ -112,7 +120,7 @@ enum Currency: Double {
         case .Pound:
             return "Pound"
         case .Dollar:
-            return "Dolar"
+            return "Dollar"
         case .Euro:
             return "Euro"
         }
