@@ -35,7 +35,7 @@ struct VstackView: View {
                 HStack {
                     Spacer()
                     VStack(spacing: 0) {
-                        SpacerButton(spacerActive: self.$topSpacer, spring: true)
+                        SpacerButton(spacerActive: self.$topSpacer)
                         if self.topSpacer {
                             Spacer()
                         }
@@ -46,7 +46,7 @@ struct VstackView: View {
                         if self.middleSpacer {
                             Spacer()
                         }
-                        SpacerButton(spacerActive: self.$middleSpacer, spring: true)
+                        SpacerButton(spacerActive: self.$middleSpacer)
                         if self.middleSpacer {
                             Spacer()
                         }
@@ -57,7 +57,7 @@ struct VstackView: View {
                         if self.bottomSpacer {
                             Spacer()
                         }
-                        SpacerButton(spacerActive: self.$bottomSpacer, spring: true)
+                        SpacerButton(spacerActive: self.$bottomSpacer)
                     }
                     Spacer()
                 }
@@ -70,10 +70,9 @@ struct VstackView: View {
 struct SpacerButton: View {
     
     @Binding var spacerActive: Bool
-    var spring: Bool = false
     
     var body: some View {
-        Button(action: { withAnimation(self.spring ? .interpolatingSpring(mass: 0.5, stiffness: 20, damping: 2, initialVelocity: 0) : .linear) { self.spacerActive.toggle() }}) {
+        Button(action: { withAnimation(.linear) { self.spacerActive.toggle() }}) {
             Text("\(self.spacerActive ? "Remove" : "Add") Spacer")
         }
     }

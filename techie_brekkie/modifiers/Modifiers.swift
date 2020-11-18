@@ -38,12 +38,7 @@ struct Modifiers: View {
                         Spacer()
                         
                         HStack {
-                            Text("""
-                                var body: some View {
-
-                                    Text(\"50% Off Flights\")
-                                """)
-                                .font(.system(.headline, design: .monospaced))
+                            CodeBox(text: "Text(\"50% Off Flights\")")
                             Spacer()
                             Text(" ")
                         }
@@ -51,42 +46,39 @@ struct Modifiers: View {
                         VStack(alignment: .leading) {
                             ModifierToggle(toggleText: "Color",
                                            active: self.$color,
-                                           explanationText: "        .foregroundColor(Color.white)")
+                                           explanationText: "  .foregroundColor(Color.white)")
                             
                             ModifierToggle(toggleText: "Font",
                                            active: self.$font,
-                                           explanationText: "        .font(Font.system(.title, design: .monospaced)")
+                                           explanationText: "  .font(Font.system(.title, design: .monospaced)")
                             
                             if self.backgroundBefore {
                                 ModifierToggle(toggleText: "Background",
                                                active: self.$background,
-                                               explanationText: "        .background(Rectangle().foregroundColor(.blue)")
+                                               explanationText: "  .background(Rectangle().foregroundColor(.blue))")
                             }
                             
                             ModifierToggle(toggleText: "Frame",
                                            active: self.$frame,
-                                           explanationText: "        .frame(width: 500, height: 500)")
+                                           explanationText: "  .frame(width: 500, height: 500)")
                             
                             if !self.backgroundBefore {
                                 ModifierToggle(toggleText: "Background",
                                                active: self.$background,
-                                               explanationText: "        .background(Rectangle().foregroundColor(.blue)")
+                                               explanationText: "  .background(Rectangle().foregroundColor(.blue))")
                             }
                             
                             ModifierToggle(toggleText: "Border",
                                            active: self.$border,
-                                           explanationText: "        .border(.red, width: 2)")
+                                           explanationText: "  .border(.red, width: 2)")
                             
                             ModifierToggle(toggleText: "Corner Radius",
                                            active: self.$cornerRadius,
-                                           explanationText: "        .cornerRadius(100)")
+                                           explanationText: "  .cornerRadius(100)")
                             
                             ModifierToggle(toggleText: "Shadow",
                                            active: self.$shadow,
-                                           explanationText: "        .shadow(radius: 50)")
-                            
-                            Text("}")
-                                .font(.system(.headline, design: .monospaced))
+                                           explanationText: "  .shadow(radius: 50)")
                         }
                         
                         Spacer()
@@ -134,10 +126,9 @@ struct ModifierToggle: View {
     
     var body: some View {
         HStack {
-            Text(self.active ? explanationText : " ")
-                .font(.system(.headline, design: .monospaced))
+            CodeBox(text: self.active ? explanationText : " ")
             Spacer()
-            Toggle(isOn: $active, label: { Text(toggleText).font(.title) })
+            Toggle(isOn: $active, label: { Text(toggleText).font(.title).foregroundColor(self.active ? .green : .red) })
                 .toggleStyle(SwitchToggleStyle())
         }
         .frame(height: 50)

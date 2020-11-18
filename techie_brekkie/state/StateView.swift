@@ -32,6 +32,8 @@ struct StateView: View {
                 StateWrapper()
             } else if selection == .Binding {
                 BindingWrapper()
+            } else if selection == .ObservableObject {
+                ObservableObjectWrapper()
             }
         }
     }
@@ -42,9 +44,8 @@ enum StateViewType: String {
     case State = "@State"
     case Binding = "@Binding"
     case ObservableObject = "@ObservableObject"
-    case EnvironmentObject = "@EnvironmentObject"
     
-    static var types: [StateViewType] = [StateViewType.State, StateViewType.Binding, StateViewType.ObservableObject, StateViewType.EnvironmentObject]
+    static var types: [StateViewType] = [StateViewType.State, StateViewType.Binding, StateViewType.ObservableObject]
 }
 
 struct StateView_Previews: PreviewProvider {

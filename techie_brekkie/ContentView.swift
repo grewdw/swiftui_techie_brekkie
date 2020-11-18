@@ -32,20 +32,16 @@ struct ContentView: View {
                         link("")
                         
                         Section(header: section("What is SwiftUI?"), footer: Text("")) {
-                            NavigationLink(destination: EmptyView()) {
+                            NavigationLink(destination: Declarative()) {
                                 link("Declarative UI framework")
                             }
-                            NavigationLink(destination: EmptyView()) {
+                            NavigationLink(destination: CrossPlatform()) {
                                 link("Cross Platform")
                             }
                             
                         }
                         
                         Section(header: section("Features"), footer: Text("")) {
-                            NavigationLink(destination: EmptyView()) {
-                                link("Overview")
-                            }
-                            
                             NavigationLink(destination: Structure()) {
                                 link("Structure & Positioning")
                             }
@@ -78,7 +74,7 @@ struct ContentView: View {
                 
                 if self.showIntro {
                     Intro(visible: self.$showIntro)
-                        .transition(.move(edge: .leading))
+                        .transition(.opacity)
                         .zIndex(3)
                 }
                 

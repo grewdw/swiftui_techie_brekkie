@@ -31,10 +31,13 @@ struct Structure: View {
             
             if selection == StructureViewType.VSTACK {
                 VstackView()
+                    .padding(.horizontal)
             } else if selection == StructureViewType.HSTACK {
                 HStackView()
+                    .padding(.horizontal)
             } else if selection == StructureViewType.ZSTACK {
                 ZStackView()
+                    .padding(.horizontal)
             }
         }
     }

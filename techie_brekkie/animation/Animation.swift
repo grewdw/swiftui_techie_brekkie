@@ -40,8 +40,10 @@ struct Animation: View {
                 }
                 
                 VStack {
-                    Text("Animations smooth the transitions that are required when a modifier is updated by a change in state")
+                    Text("Animations smooth the transitions from one state to the next")
                         .foregroundColor(.white)
+                        .font(.title)
+                        .frame(width: geometry.size.width * 0.3)
                     Button(action: {
                         withAnimation(.linear(duration: 1)) {
                             self.state.stopTimer()

@@ -18,7 +18,7 @@ struct Outro: View {
                 Rectangle()
                     .foregroundColor(.black)
                 
-                Text("Thank you for listening")
+                Text("Thanks for listening")
                     .font(.system(size: 128, weight: .heavy, design: Font.Design.default))
                 
                 VStack(alignment: .leading) {
@@ -33,7 +33,7 @@ struct Outro: View {
                 .frame(width: geometry.size.width * 0.9 - 100, height: 240, alignment: .leading)
                 .offset(y: self.getTextY(height: geometry.size.height))
             }
-            .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.9)
+            .frame(width: geometry.size.width, height: geometry.size.height)
             .shadow(radius: 20)
             .background(Color.black.opacity(0.9).frame(width: geometry.size.width, height: geometry.size.height))
                 .onTapGesture {

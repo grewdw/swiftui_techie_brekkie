@@ -26,13 +26,15 @@ struct BindingWrapper: View {
                     }
                     .frame(width: geometry.size.width * 0.3)
                     .padding()
-                    .border(Color.blue, width: 3)
+                    .background(Color.blue)
                     Spacer()
                     CodeBox(text: """
                         struct Receipt: View {
                         
+
                           @State var currency: Currency = \(self.currency)
-                        
+
+
                           var body: some View {
                         
                             HStack {
@@ -51,13 +53,15 @@ struct BindingWrapper: View {
                     Spacer()
                     CurrencySelector(currency: self.$currency)
                         .padding()
-                        .border(Color.blue, width: 3)
+                        .background(Color.red)
                     Spacer()
                     CodeBox(text: """
                         struct CurrencySelector: View {
 
+
                           @Binding var currency: Currency
-                        
+
+
                           var body: some View {
                           
                             Picker("Currency", selection: $currency) {
@@ -99,10 +103,10 @@ struct Item: View {
     var body: some View {
         HStack {
             Text(label)
-                .font(.headline)
+                .font(.title)
             Spacer()
             Text("\(Currency.getSymbol(currency))\(String(format: "%.2f", cost))")
-                .font(.headline)
+                .font(.title)
         }
     }
 }

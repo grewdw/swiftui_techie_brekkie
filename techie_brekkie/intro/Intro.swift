@@ -17,7 +17,7 @@ struct Intro: View {
             Image("wwdc_screenshot")
                 .resizable()
                 .scaledToFit()
-                .frame(maxWidth: geometry.size.width * 0.9, maxHeight: geometry.size.height * 0.9)
+                .frame(maxWidth: geometry.size.width, maxHeight: geometry.size.height)
                 .shadow(radius: 20)
                 .background(Color.black.opacity(0.9).frame(width: geometry.size.width, height: geometry.size.height))
                     .onTapGesture {

@@ -30,6 +30,7 @@ struct Windmill: View {
                            height: min(geometry.size.height, geometry.size.width) * 0.6)
                     .rotationEffect(Angle(degrees: self.state.windmillRotation))
             }
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
     }
 }
